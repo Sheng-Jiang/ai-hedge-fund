@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import cast
 
 from hedge_fund.signals.arf import ARFModel
+from hedge_fund.signals.arf_forecast import ARFForecastModel
 from hedge_fund.signals.base import AlphaModel, InvestmentApproach, QuantModel
 from hedge_fund.signals.buffett import BuffettAgent
 from hedge_fund.signals.druckenmiller import DruckenmillerAgent
@@ -18,6 +19,7 @@ ALPHA_MODEL_REGISTRY: dict[str, type[AlphaModel]] = {
     # Quant models
     "pead": PEADModel,
     "arf": ARFModel,
+    "arf_forecast": ARFForecastModel,
     # LLM investor agents
     "buffett": BuffettAgent,
     "munger": MungerAgent,
@@ -53,6 +55,7 @@ __all__ = [
     "DruckenmillerAgent",
     "PEADModel",
     "ARFModel",
+    "ARFForecastModel",
     "ALPHA_MODEL_REGISTRY",
     "get_investment_approach",
 ]
