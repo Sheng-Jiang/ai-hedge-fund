@@ -9,6 +9,9 @@ strategies:
     weight: 1.0
     models:
       - name: arf
+        weight: 0.5
+      - name: arf_forecast
+        weight: 0.5
 risk:
   max_position_pct: 0.20      # max 20% equity in any single stock
   max_gross_exposure: 1.0     # 100% unlevered gross exposure
